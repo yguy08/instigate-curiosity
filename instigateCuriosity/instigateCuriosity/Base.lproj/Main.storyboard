@@ -100,8 +100,7 @@
                                 <rect key="frame" x="270" y="196" width="60" height="30"/>
                                 <state key="normal" title="Level Up"/>
                                 <connections>
-                                    <action selector="keepHeadline:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTW-k4-gyw"/>
-                                    <segue destination="TUM-99-Wtn" kind="presentation" id="Cnz-ot-G1f"/>
+                                    <segue destination="TUM-99-Wtn" kind="presentation" id="mlf-qy-1jj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Instigate Curiosity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8j-x5-6ML">

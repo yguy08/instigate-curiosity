@@ -17,17 +17,14 @@ class LevelUpController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(animated: Bool) {
             if (PFUser.currentUser() == nil) {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") 
+                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
                     self.presentViewController(viewController, animated: true, completion: nil)
                 })
-            } else{
+            } else {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    
                     let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("")
                     self.presentViewController(viewController, animated: true, completion: nil)
                 })
-
         }
     }
 
