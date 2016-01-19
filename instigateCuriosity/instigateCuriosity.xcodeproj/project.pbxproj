@@ -17,6 +17,7 @@
 		3436BAFD1C4D96AE001ECBAE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3436BAF51C4D96AE001ECBAE /* StoreKit.framework */; };
 		3436BAFE1C4D96AE001ECBAE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3436BAF61C4D96AE001ECBAE /* SystemConfiguration.framework */; };
 		3436BB001C4D96B7001ECBAE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3436BAFF1C4D96B7001ECBAE /* libsqlite3.tbd */; };
+		3436BB041C4DBD02001ECBAE /* LevelUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436BB031C4DBD02001ECBAE /* LevelUpController.swift */; };
 		347F36251C4C4C1D0056C8A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F36241C4C4C1D0056C8A4 /* AppDelegate.swift */; };
 		347F36271C4C4C1D0056C8A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F36261C4C4C1D0056C8A4 /* ViewController.swift */; };
 		347F362A1C4C4C1D0056C8A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347F36281C4C4C1D0056C8A4 /* Main.storyboard */; };
@@ -38,7 +39,8 @@
 		3436BAF51C4D96AE001ECBAE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3436BAF61C4D96AE001ECBAE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3436BAFF1C4D96B7001ECBAE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		347F36211C4C4C1D0056C8A4 /* instigateCuriosity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instigateCuriosity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3436BB031C4DBD02001ECBAE /* LevelUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelUpController.swift; sourceTree = "<group>"; };
+		347F36211C4C4C1D0056C8A4 /* IC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347F36241C4C4C1D0056C8A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		347F36261C4C4C1D0056C8A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		347F36291C4C4C1D0056C8A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 		347F36221C4C4C1D0056C8A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				347F36211C4C4C1D0056C8A4 /* instigateCuriosity.app */,
+				347F36211C4C4C1D0056C8A4 /* IC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +111,7 @@
 				347F36241C4C4C1D0056C8A4 /* AppDelegate.swift */,
 				347F36261C4C4C1D0056C8A4 /* ViewController.swift */,
 				347F36281C4C4C1D0056C8A4 /* Main.storyboard */,
+				3436BB031C4DBD02001ECBAE /* LevelUpController.swift */,
 				347F362B1C4C4C1D0056C8A4 /* Assets.xcassets */,
 				347F362D1C4C4C1D0056C8A4 /* LaunchScreen.storyboard */,
 				347F36301C4C4C1D0056C8A4 /* Info.plist */,
@@ -133,7 +136,7 @@
 			);
 			name = instigateCuriosity;
 			productName = instigateCuriosity;
-			productReference = 347F36211C4C4C1D0056C8A4 /* instigateCuriosity.app */;
+			productReference = 347F36211C4C4C1D0056C8A4 /* IC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					347F36201C4C4C1D0056C8A4 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5FBQD3TCRJ;
 					};
 				};
 			};
@@ -187,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3436BB041C4DBD02001ECBAE /* LevelUpController.swift in Sources */,
 				347F36271C4C4C1D0056C8A4 /* ViewController.swift in Sources */,
 				347F36251C4C4C1D0056C8A4 /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +304,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -306,7 +313,8 @@
 				INFOPLIST_FILE = instigateCuriosity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.instigateCuriosity;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IC;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -314,6 +322,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -321,7 +331,8 @@
 				INFOPLIST_FILE = instigateCuriosity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.instigateCuriosity;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IC;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
