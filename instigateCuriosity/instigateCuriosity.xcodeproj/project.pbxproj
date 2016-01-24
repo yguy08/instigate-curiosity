@@ -26,6 +26,9 @@
 		34A490621C54664C00290BEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A4905A1C54664C00290BEC /* SystemConfiguration.framework */; };
 		34A490641C54665800290BEC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A490631C54665800290BEC /* libsqlite3.tbd */; };
 		34A490661C54827600290BEC /* LevelUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A490651C54827600290BEC /* LevelUpController.swift */; };
+		34BBFD451C5531900098866E /* ChooseSignUpLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BBFD441C5531900098866E /* ChooseSignUpLogin.swift */; };
+		34BBFD471C5533460098866E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BBFD461C5533460098866E /* SignUp.swift */; };
+		34BBFD491C5533740098866E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BBFD481C5533740098866E /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		34A4905A1C54664C00290BEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		34A490631C54665800290BEC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		34A490651C54827600290BEC /* LevelUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelUpController.swift; sourceTree = "<group>"; };
+		34BBFD441C5531900098866E /* ChooseSignUpLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSignUpLogin.swift; sourceTree = "<group>"; };
+		34BBFD461C5533460098866E /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		34BBFD481C5533740098866E /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 				34A490411C5464DD00290BEC /* LaunchScreen.storyboard */,
 				34A490441C5464DD00290BEC /* Info.plist */,
 				34A490651C54827600290BEC /* LevelUpController.swift */,
+				34BBFD441C5531900098866E /* ChooseSignUpLogin.swift */,
+				34BBFD461C5533460098866E /* SignUp.swift */,
+				34BBFD481C5533740098866E /* Login.swift */,
 			);
 			path = instigateCuriosity;
 			sourceTree = "<group>";
@@ -193,7 +202,10 @@
 			files = (
 				34A490661C54827600290BEC /* LevelUpController.swift in Sources */,
 				34A4903B1C5464DD00290BEC /* ViewController.swift in Sources */,
+				34BBFD451C5531900098866E /* ChooseSignUpLogin.swift in Sources */,
+				34BBFD491C5533740098866E /* Login.swift in Sources */,
 				34A490391C5464DD00290BEC /* AppDelegate.swift in Sources */,
+				34BBFD471C5533460098866E /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +363,7 @@
 				34A490491C5464DD00290BEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

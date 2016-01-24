@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "34A490341C5464DD00290BEC"
-               BuildableName = "instigateCuriosity.app"
+               BuildableName = "instigateC.app"
                BlueprintName = "instigateCuriosity"
                ReferencedContainer = "container:instigateCuriosity.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "34A490341C5464DD00290BEC"
-            BuildableName = "instigateCuriosity.app"
+            BuildableName = "instigateC.app"
             BlueprintName = "instigateCuriosity"
             ReferencedContainer = "container:instigateCuriosity.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "34A490341C5464DD00290BEC"
-            BuildableName = "instigateCuriosity.app"
+            BuildableName = "instigateC.app"
             BlueprintName = "instigateCuriosity"
             ReferencedContainer = "container:instigateCuriosity.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "34A490341C5464DD00290BEC"
-            BuildableName = "instigateCuriosity.app"
+            BuildableName = "instigateC.app"
             BlueprintName = "instigateCuriosity"
             ReferencedContainer = "container:instigateCuriosity.xcodeproj">
          </BuildableReference>

@@ -18,7 +18,7 @@ class LevelUpController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         if (PFUser.currentUser() == nil) {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SignUp")
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ChooseSignUpLogin")
                 self.presentViewController(viewController, animated: true, completion: nil)
             })
         } else {
