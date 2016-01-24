@@ -27,6 +27,9 @@ class ViewController: UIViewController, UITextViewDelegate {
         //grab headline from parse and display in text view
         DisplayCurrentHeadlineInTextView()
         
+        //get current user
+        getCurrentUserName()
+        
     }
     
     func textViewDidEndEditing(textView: UITextView) {
@@ -46,9 +49,7 @@ class ViewController: UIViewController, UITextViewDelegate {
      }
     
     @IBAction func checkBalanceAction(sender: AnyObject) {
-        
-        
-        headlineLabel.text = "10"
+        getCurrentBalance()
     }
     
     //Custom Functions
@@ -88,13 +89,25 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     
     func getCurrentBalance(){
-        
+        let currentUser = PFUser.currentUser()
+        let currentUserName = currentUser?.username
+        if currentUser != nil{
+            let query = PFUser.query()
+            query!.whereKey("username", equalTo: currentUserName!)
+            let money = currentUser!["money"] as! Int
+            headlineLabel.text = String (money)
+        }
     }
     
-    func getCurrentUser(){
-        
+    //get the current user username and set to header
+    func getCurrentUserName() {
+        let currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            headlineLabel.text = currentUser?.username
+        } else {
+            headlineLabel.text = "Good luck!"
+        }
     }
-
     
     
     

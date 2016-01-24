@@ -15,6 +15,9 @@ import Bolts
 
 class SignUp: UIViewController, UITextFieldDelegate {
     
+    //sign up bonus for signing up
+    let SignUpBonus = 10
+    
     
     @IBOutlet weak var signUpUserNameTextField: UITextField!
     @IBOutlet weak var signUpPasswordTextField: UITextField!
@@ -55,7 +58,7 @@ class SignUp: UIViewController, UITextFieldDelegate {
         user.password = signUpPasswordTextField.text
         //user.email = "email@example.com"
         // other fields can be set just like with PFObject
-        user["money"] = 10
+        user["money"] = SignUpBonus
         
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
