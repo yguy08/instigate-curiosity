@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  instigateCuriosity
 //
-//  Created by Wyatt Endres on 1/17/16.
+//  Created by Wyatt Endres on 1/23/16.
 //  Copyright © 2016 Wyatt Endres. All rights reserved.
 //
 
@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize Parse.
         Parse.setApplicationId("mxOfh625v31NX7R9Fxiva1U0MhlTKukrzHBUrW9e",
             clientKey: "A8w3mPwVOqfo5Iw2bKgwyE20MXY4TNOpvn3Pu5Yh")
+        
         
         return true
     }
