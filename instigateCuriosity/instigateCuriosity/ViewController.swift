@@ -96,6 +96,8 @@ class ViewController: UIViewController, UITextViewDelegate {
             query!.whereKey("username", equalTo: currentUserName!)
             let money = currentUser!["money"] as! Int
             headlineLabel.text = String (money)
+        } else {
+            headlineLabel.text = "💩"
         }
     }
     

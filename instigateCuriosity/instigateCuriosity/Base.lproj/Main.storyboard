@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Information-->
@@ -25,40 +24,54 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lo-w0-nhh">
-                                <rect key="frame" x="20" y="319" width="30" height="30"/>
+                                <rect key="frame" x="20" y="28" width="30" height="30"/>
                                 <state key="normal" title="🏠"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="GqN-td-7hi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyh-Ak-5qC">
-                                <rect key="frame" x="20" y="390" width="30" height="30"/>
+                                <rect key="frame" x="20" y="319" width="30" height="30"/>
                                 <state key="normal" title="🚀"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5U-cT-7JI">
                                 <rect key="frame" x="20" y="57" width="335" height="254"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">This page lists all emoji buttons displayed throughout the app and what they mean. Home and Skull will take you home or log you out respectivley. Click an emoji to find out more.</string>
+                                <string key="text">This page lists all of the emoji buttons found in the app. Select one from below to learn more about it. This page is updated frequently.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcW-Cf-Hiu">
-                                <rect key="frame" x="20" y="352" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re2-Tl-uge">
+                                <rect key="frame" x="325" y="30" width="30" height="30"/>
                                 <state key="normal" title="☠️"/>
+                                <connections>
+                                    <action selector="logOutAction:" destination="nAy-sD-Lz0" eventType="touchUpInside" id="hNB-uE-ix2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXX-RX-z6L">
+                                <rect key="frame" x="58" y="319" width="30" height="30"/>
+                                <state key="normal" title="💰"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvM-by-D2H">
+                                <rect key="frame" x="96" y="319" width="30" height="30"/>
+                                <state key="normal" title="🏠"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="informationTextView" destination="O5U-cT-7JI" id="5xb-Wr-y4e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lls-3z-eC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="304.5" y="-388.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="instigateC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="instigateC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -107,7 +120,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Headline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHX-1s-dTZ">
-                                <rect key="frame" x="153" y="28" width="68" height="21"/>
+                                <rect key="frame" x="20" y="28" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -126,64 +139,10 @@
             </objects>
             <point key="canvasLocation" x="304.5" y="353.5"/>
         </scene>
-        <!--Choose Sign Up Login-->
-        <scene sceneID="2CZ-GY-fFw">
-            <objects>
-                <viewController storyboardIdentifier="ChooseSignUpLogin" id="reJ-Va-qsf" customClass="ChooseSignUpLogin" customModule="instigateC" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CLF-1Y-dpR"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZYL-h2-bCb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="myC-SP-iRd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMG-8b-40c">
-                                <rect key="frame" x="20" y="319" width="30" height="30"/>
-                                <state key="normal" title="🔏"/>
-                                <connections>
-                                    <segue destination="y9u-fX-x4K" kind="show" id="NnR-zQ-KBr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9B-Z1-5w4">
-                                <rect key="frame" x="325" y="319" width="30" height="30"/>
-                                <state key="normal" title="🔓"/>
-                                <connections>
-                                    <segue destination="sxA-WB-Bqo" kind="show" id="drZ-hJ-zGF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4T-wK-2lP">
-                                <rect key="frame" x="20" y="28" width="30" height="30"/>
-                                <state key="normal" title="⬅️"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="MC0-Z9-hJi"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up or Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a10-Gy-7zw">
-                                <rect key="frame" x="121" y="32" width="132" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="DMG-8b-40c" firstAttribute="leading" secondItem="myC-SP-iRd" secondAttribute="leadingMargin" constant="4" id="PKi-NR-pYR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="l9B-Z1-5w4" secondAttribute="trailing" constant="4" id="XMc-eX-Djk"/>
-                            <constraint firstItem="DMG-8b-40c" firstAttribute="centerY" secondItem="myC-SP-iRd" secondAttribute="centerY" id="Zv3-St-xCY"/>
-                            <constraint firstItem="l9B-Z1-5w4" firstAttribute="baseline" secondItem="DMG-8b-40c" secondAttribute="baseline" id="anR-Sa-Hew"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ic-36-TLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="304.5" y="1098.5"/>
-        </scene>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="3fh-D3-wag">
             <objects>
-                <viewController id="sxA-WB-Bqo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="sxA-WB-Bqo" customClass="Login" customModule="instigateC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MXp-ca-iir"/>
                         <viewControllerLayoutGuide type="bottom" id="OLc-j5-Oy0"/>
@@ -202,7 +161,7 @@
                                 <rect key="frame" x="20" y="28" width="30" height="30"/>
                                 <state key="normal" title="⬅️"/>
                                 <connections>
-                                    <segue destination="reJ-Va-qsf" kind="show" id="aYH-oQ-1ek"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ZLR-Ue-fTK"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ke3-hy-W6o">
@@ -215,13 +174,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sc-26-x8N">
-                                <rect key="frame" x="317" y="319" width="30" height="30"/>
-                                <state key="normal" title="🔏"/>
-                                <connections>
-                                    <segue destination="y9u-fX-x4K" kind="show" id="93J-b0-MwY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuK-IL-40t">
                                 <rect key="frame" x="20" y="319" width="30" height="30"/>
                                 <state key="normal" title="🏠"/>
@@ -229,14 +181,26 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="VLi-8h-QQY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sc-26-x8N">
+                                <rect key="frame" x="172" y="142" width="30" height="30"/>
+                                <state key="normal" title="🔏"/>
+                                <connections>
+                                    <segue destination="y9u-fX-x4K" kind="show" id="93J-b0-MwY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="loginHeaderText" destination="KSU-fu-pt4" id="tyT-nn-kav"/>
+                        <outlet property="loginUsernameTextField" destination="ke3-hy-W6o" id="Toe-oe-Uot"/>
+                        <outlet property="passwordUsernameTextField" destination="OVb-GI-y5M" id="x5v-Gh-n8k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjU-C0-Skc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775.5" y="1098.5"/>
+            <point key="canvasLocation" x="304.5" y="1152.5"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="9vh-Qr-b1M">
@@ -254,7 +218,7 @@
                                 <rect key="frame" x="20" y="28" width="30" height="30"/>
                                 <state key="normal" title="⬅️"/>
                                 <connections>
-                                    <segue destination="reJ-Va-qsf" kind="show" id="2pr-77-hMz"/>
+                                    <segue destination="sxA-WB-Bqo" kind="show" id="obX-Kf-Zmj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ro-fY-mY9">
@@ -280,13 +244,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="uOP-Oa-J4O"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPI-KP-7hi">
-                                <rect key="frame" x="325" y="319" width="30" height="30"/>
-                                <state key="normal" title="🔓"/>
-                                <connections>
-                                    <segue destination="sxA-WB-Bqo" kind="show" id="dQx-6t-RnU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -298,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3e-jr-9LX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="1905.5"/>
+            <point key="canvasLocation" x="775.5" y="1160.5"/>
         </scene>
         <!--Level Up Controller-->
         <scene sceneID="D9A-6w-mpg">
@@ -333,9 +290,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GqN-td-7hi"/>
-        <segue reference="2pr-77-hMz"/>
-        <segue reference="93J-b0-MwY"/>
-        <segue reference="dQx-6t-RnU"/>
+        <segue reference="uOP-Oa-J4O"/>
     </inferredMetricsTieBreakers>
 </document>
