@@ -16,6 +16,13 @@ class LevelUpController: UIViewController {
     
     //Check if existing user
     override func viewWillAppear(animated: Bool) {
+        //call level up method to check user money and decide what level up to display
+        levelUpMethod()
+
+    }
+    
+    //method for checking user money and taking to screen based on level
+    func levelUpMethod(){
         if (PFUser.currentUser() == nil) {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ChooseSignUpLogin")
@@ -23,10 +30,11 @@ class LevelUpController: UIViewController {
             })
         } else {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("")
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Main")
                 self.presentViewController(viewController, animated: true, completion: nil)
             })
         }
+        
     }
     
     

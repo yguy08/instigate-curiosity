@@ -50,12 +50,20 @@
                                     <segue destination="Ma7-Kl-zNr" kind="show" id="egV-xb-oyk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdF-Zl-Uu6">
+                                <rect key="frame" x="172" y="319" width="30" height="30"/>
+                                <state key="normal" title="☠️"/>
+                                <connections>
+                                    <action selector="logOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eya-NG-UOA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="headLineTextView" destination="P3d-a5-A8i" id="3lv-VC-vYg"/>
+                        <outlet property="logOutButtonField" destination="zdF-Zl-Uu6" id="3QL-p3-dKX"/>
                         <outlet property="updateButtonField" destination="AHL-GA-7ot" id="LdK-Ob-mzp"/>
                     </connections>
                 </viewController>
@@ -169,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="775.5" y="1098.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up-->
         <scene sceneID="9vh-Qr-b1M">
             <objects>
-                <viewController id="y9u-fX-x4K" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" id="y9u-fX-x4K" customClass="SignUp" customModule="instigateC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KG8-oe-FRA"/>
                         <viewControllerLayoutGuide type="bottom" id="cJ3-80-oXy"/>
@@ -222,6 +230,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="signUpPasswordTextField" destination="qxC-cS-9Zw" id="FLH-TH-YHO"/>
+                        <outlet property="signUpUserNameTextField" destination="ANj-K4-qUJ" id="cad-zA-rxQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3e-jr-9LX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

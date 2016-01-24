@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var headLineTextView: UITextView!
     @IBOutlet weak var updateButtonField: UIButton!
     @IBOutlet weak var headLineTitleLabel: UILabel!
+    @IBOutlet weak var logOutButtonField: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +79,12 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBAction func levelUpButton(sender: AnyObject) {
         
     }
+    
+    @IBAction func logOutAction(sender: AnyObject) {
+        PFUser.logOutInBackground()
+        _ = PFUser.currentUser()
+    }
+    
     
     
 
