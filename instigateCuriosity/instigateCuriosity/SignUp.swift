@@ -20,8 +20,6 @@ class SignUp: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpPasswordTextField: UITextField!
     
     
-    
-    //Check if existing user
     override func viewWillAppear(animated: Bool) {
         
         // Handle the text field’s user input through delegate callbacks.
@@ -29,8 +27,6 @@ class SignUp: UIViewController, UITextFieldDelegate {
         signUpPasswordTextField.delegate = self
         
         signUpUserNameTextField.becomeFirstResponder()
-        
-        
     }
     
     func textFieldDidEndEditing(textField: UITextField) {

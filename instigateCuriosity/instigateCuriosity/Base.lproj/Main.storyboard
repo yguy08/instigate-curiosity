@@ -6,6 +6,55 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Information-->
+        <scene sceneID="pwn-SZ-3g5">
+            <objects>
+                <viewController storyboardIdentifier="Information" id="nAy-sD-Lz0" customClass="Information" customModule="instigateC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xOu-4P-HgM"/>
+                        <viewControllerLayoutGuide type="bottom" id="MSX-GD-QUi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fMK-sJ-0EU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NV-wQ-HrB">
+                                <rect key="frame" x="143" y="28" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lo-w0-nhh">
+                                <rect key="frame" x="20" y="319" width="30" height="30"/>
+                                <state key="normal" title="🏠"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="GqN-td-7hi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyh-Ak-5qC">
+                                <rect key="frame" x="20" y="390" width="30" height="30"/>
+                                <state key="normal" title="🚀"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5U-cT-7JI">
+                                <rect key="frame" x="20" y="57" width="335" height="254"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">This page lists all emoji buttons displayed throughout the app and what they mean. Home and Skull will take you home or log you out respectivley. Click an emoji to find out more.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcW-Cf-Hiu">
+                                <rect key="frame" x="20" y="352" width="30" height="30"/>
+                                <state key="normal" title="☠️"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lls-3z-eC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="-388.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,12 +67,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6S-dZ-GXZ">
-                                <rect key="frame" x="153" y="28" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P3d-a5-A8i">
                                 <rect key="frame" x="20" y="57" width="335" height="204"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,28 +85,40 @@
                                     <action selector="updateHeadLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lvz-dy-JQs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4H-J2-cst">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQY-P6-anf">
+                                <rect key="frame" x="172" y="319" width="30" height="30"/>
+                                <state key="normal" title="⚠️"/>
+                                <connections>
+                                    <segue destination="nAy-sD-Lz0" kind="show" id="T9c-g0-Cyl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ets-70-D8F">
                                 <rect key="frame" x="325" y="319" width="30" height="30"/>
                                 <state key="normal" title="🚀"/>
                                 <connections>
-                                    <action selector="levelUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hhh-Dw-s6D"/>
-                                    <segue destination="Ma7-Kl-zNr" kind="show" id="egV-xb-oyk"/>
+                                    <segue destination="Ma7-Kl-zNr" kind="show" id="d0Y-u8-Zb5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdF-Zl-Uu6">
-                                <rect key="frame" x="172" y="319" width="30" height="30"/>
-                                <state key="normal" title="☠️"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHg-ge-VFu">
+                                <rect key="frame" x="325" y="369" width="30" height="30"/>
+                                <state key="normal" title="💰"/>
                                 <connections>
-                                    <action selector="logOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eya-NG-UOA"/>
+                                    <action selector="checkBalanceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdw-Sw-uce"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Headline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHX-1s-dTZ">
+                                <rect key="frame" x="153" y="28" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="headLineTextView" destination="P3d-a5-A8i" id="3lv-VC-vYg"/>
-                        <outlet property="logOutButtonField" destination="zdF-Zl-Uu6" id="3QL-p3-dKX"/>
+                        <outlet property="headlineLabel" destination="kHX-1s-dTZ" id="SP7-cO-hzf"/>
                         <outlet property="updateButtonField" destination="AHL-GA-7ot" id="LdK-Ob-mzp"/>
                     </connections>
                 </viewController>
@@ -104,6 +159,12 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="MC0-Z9-hJi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up or Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a10-Gy-7zw">
+                                <rect key="frame" x="121" y="32" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -255,6 +316,12 @@
                                 <rect key="frame" x="172" y="319" width="30" height="30"/>
                                 <state key="normal" title="💸"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checking Balance..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgC-hg-dWq">
+                                <rect key="frame" x="111" y="28" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -266,9 +333,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uOP-Oa-J4O"/>
+        <segue reference="GqN-td-7hi"/>
+        <segue reference="2pr-77-hMz"/>
         <segue reference="93J-b0-MwY"/>
         <segue reference="dQx-6t-RnU"/>
-        <segue reference="2pr-77-hMz"/>
     </inferredMetricsTieBreakers>
 </document>

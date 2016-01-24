@@ -14,23 +14,50 @@ class ViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var headLineTextView: UITextView!
     @IBOutlet weak var updateButtonField: UIButton!
-    @IBOutlet weak var headLineTitleLabel: UILabel!
-    @IBOutlet weak var logOutButtonField: UIButton!
+    @IBOutlet weak var headlineLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        // Handle the text field’s user input through delegate callbacks.
+        // Handle the text view’s user input through delegate callbacks.
         headLineTextView.delegate = self
         
         //Give headlineTextField focus
         headLineTextView.becomeFirstResponder()
         
-        //Grab Current Headline from Parse DB and set headlineLabel equal to it
+        //grab headline from parse and display in text view
+        DisplayCurrentHeadlineInTextView()
+        
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        updateButtonField.backgroundColor = UIColor.whiteColor()
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        updateButtonField.backgroundColor = UIColor.blackColor()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    @IBAction func updateHeadLine(sender: AnyObject) {
+        updateHeadLine()
+     }
+    
+    @IBAction func checkBalanceAction(sender: AnyObject) {
+        
+        
+        headlineLabel.text = "10"
+    }
+    
+    //Custom Functions
+    func DisplayCurrentHeadlineInTextView(){
+        //Grab Current Headline from Parse DB
         let query = PFQuery(className:"Headline")
         query.getObjectInBackgroundWithId("QZVUNUutyi") {
             (headline: PFObject?, error: NSError?) -> Void in
+            //if no error and text in text view then set headline to textview.txt
             if error == nil && headline != nil {
                 let currentHeadline = headline!["Text"] as! String
                 self.headLineTextView.text = currentHeadline
@@ -40,21 +67,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func textViewDidEndEditing(textView: UITextView) {
-        updateButtonField.backgroundColor = UIColor.whiteColor()
-    }
-    
-    func textViewDidChange(textView: UITextView) {
-        updateButtonField.backgroundColor = UIColor.blackColor()
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func updateHeadLine(sender: AnyObject) {
+    func updateHeadLine(){
         // Hide the keyboard.
         headLineTextView.resignFirstResponder()
         //Query parse for headline and update
@@ -72,22 +85,18 @@ class ViewController: UIViewController, UITextViewDelegate {
         } else {
             self.headLineTextView.text = "@Username is an idiot"
         }
-     
-       
     }
     
-    @IBAction func levelUpButton(sender: AnyObject) {
+    func getCurrentBalance(){
         
     }
     
-    @IBAction func logOutAction(sender: AnyObject) {
-        PFUser.logOutInBackground()
-        _ = PFUser.currentUser()
+    func getCurrentUser(){
+        
     }
-    
-    
-    
 
-
+    
+    
+    
 }
 

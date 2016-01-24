@@ -29,6 +29,7 @@
 		34BBFD451C5531900098866E /* ChooseSignUpLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BBFD441C5531900098866E /* ChooseSignUpLogin.swift */; };
 		34BBFD471C5533460098866E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BBFD461C5533460098866E /* SignUp.swift */; };
 		34BBFD491C5533740098866E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BBFD481C5533740098866E /* Login.swift */; };
+		34BBFD4B1C554DE30098866E /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BBFD4A1C554DE30098866E /* Information.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		34BBFD441C5531900098866E /* ChooseSignUpLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSignUpLogin.swift; sourceTree = "<group>"; };
 		34BBFD461C5533460098866E /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		34BBFD481C5533740098866E /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		34BBFD4A1C554DE30098866E /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				34BBFD441C5531900098866E /* ChooseSignUpLogin.swift */,
 				34BBFD461C5533460098866E /* SignUp.swift */,
 				34BBFD481C5533740098866E /* Login.swift */,
+				34BBFD4A1C554DE30098866E /* Information.swift */,
 			);
 			path = instigateCuriosity;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34A490661C54827600290BEC /* LevelUpController.swift in Sources */,
+				34BBFD4B1C554DE30098866E /* Information.swift in Sources */,
 				34A4903B1C5464DD00290BEC /* ViewController.swift in Sources */,
 				34BBFD451C5531900098866E /* ChooseSignUpLogin.swift in Sources */,
 				34BBFD491C5533740098866E /* Login.swift in Sources */,

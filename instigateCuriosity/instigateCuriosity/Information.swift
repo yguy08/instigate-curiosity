@@ -1,5 +1,5 @@
 //
-//  Login.swift
+//  Information.swift
 //  instigateCuriosity
 //
 //  Created by Wyatt Endres on 1/24/16.
@@ -13,12 +13,18 @@ import Bolts
 
 
 
-class Login: UIViewController {
+class Information: UIViewController {
     
     
     
     override func viewWillAppear(animated: Bool) {
         
+    }
+    
+    
+    func logOutCurrentParseUser(){
+        PFUser.logOutInBackground()
+        _ = PFUser.currentUser()
     }
     
     
