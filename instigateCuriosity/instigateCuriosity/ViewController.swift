@@ -11,6 +11,14 @@ import Parse
 import Bolts
 
 class ViewController: UIViewController, UITextViewDelegate {
+    
+    
+    let HeadLineClassName = "Headline"
+    let HeadLineObjectIdString = "QZVUNUutyi"
+    let noUserSignedInMessageText = "Good Luck!"
+    let noMoneyMessageText = "💩"
+    let userSignedInBlankTextEnteredMessage = ", you're an idiot...you can't submit a blank headline..try again."
+    let noUserSignedInBlankTextEnteredMessage = "You can't submit a blank headline...try again."
 
     @IBOutlet weak var headLineTextView: UITextView!
     @IBOutlet weak var updateButtonField: UIButton!
@@ -27,7 +35,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         //grab headline from parse and display in text view
         DisplayCurrentHeadlineInTextView()
         
-        //get current user
+        //get current user and set to header name
         getCurrentUserName()
         
     }
@@ -55,8 +63,8 @@ class ViewController: UIViewController, UITextViewDelegate {
     //Custom Functions
     func DisplayCurrentHeadlineInTextView(){
         //Grab Current Headline from Parse DB
-        let query = PFQuery(className:"Headline")
-        query.getObjectInBackgroundWithId("QZVUNUutyi") {
+        let query = PFQuery(className:(HeadLineClassName))
+        query.getObjectInBackgroundWithId((HeadLineObjectIdString)) {
             (headline: PFObject?, error: NSError?) -> Void in
             //if no error and text in text view then set headline to textview.txt
             if error == nil && headline != nil {
@@ -73,8 +81,8 @@ class ViewController: UIViewController, UITextViewDelegate {
         headLineTextView.resignFirstResponder()
         //Query parse for headline and update
         if self.headLineTextView.text != "" {
-            let query = PFQuery(className:"Headline")
-            query.getObjectInBackgroundWithId("QZVUNUutyi") {
+            let query = PFQuery(className: (HeadLineClassName))
+            query.getObjectInBackgroundWithId((HeadLineObjectIdString)) {
                 (headline: PFObject?, error: NSError?) -> Void in
                 if error != nil {
                     print(error)
@@ -84,7 +92,7 @@ class ViewController: UIViewController, UITextViewDelegate {
                 }
             }
         } else {
-            self.headLineTextView.text = "@Username is an idiot"
+            emptyHeadlineTextField()
         }
     }
     
@@ -97,7 +105,7 @@ class ViewController: UIViewController, UITextViewDelegate {
             let money = currentUser!["money"] as! Int
             headlineLabel.text = String (money)
         } else {
-            headlineLabel.text = "💩"
+            headlineLabel.text = noMoneyMessageText
         }
     }
     
@@ -107,8 +115,29 @@ class ViewController: UIViewController, UITextViewDelegate {
         if currentUser != nil {
             headlineLabel.text = currentUser?.username
         } else {
-            headlineLabel.text = "Good luck!"
+            headlineLabel.text = noUserSignedInMessageText
         }
+    }
+    
+    //empty text view function telling user they are dumb if no text entered. first check if user is logged in
+    func emptyHeadlineTextField(){
+        let currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            headLineTextView.text = (currentUser?.username)! + userSignedInBlankTextEnteredMessage
+                headLineTextView.becomeFirstResponder()
+            //get text view character count and hightlight to make easier to delete
+            getTextViewCountAndMakeSelectedRange()
+        } else {
+            headLineTextView.text = noUserSignedInBlankTextEnteredMessage
+            headLineTextView.becomeFirstResponder()
+            getTextViewCountAndMakeSelectedRange()
+        }
+    }
+    
+    //get textViewCharacter count and highlight textView field
+    func getTextViewCountAndMakeSelectedRange (){
+        let headLineTextViewStringCount = headLineTextView.text.characters.count
+        headLineTextView.selectedRange = NSMakeRange(0, (headLineTextViewStringCount))
     }
     
     
