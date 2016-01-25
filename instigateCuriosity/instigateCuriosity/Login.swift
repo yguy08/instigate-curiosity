@@ -62,7 +62,11 @@ class Login: UIViewController, UITextFieldDelegate {
                     self.presentViewController(viewController, animated: true, completion: nil)
                 })
             } else {
-               self.loginHeaderText.text = "💩"
+                self.loginHeaderText.text = "💩"
+                self.loginUsernameTextField.text = ""
+                self.passwordUsernameTextField.text = ""
+                self.loginUsernameTextField.becomeFirstResponder()
+            
             }
         }
     }
