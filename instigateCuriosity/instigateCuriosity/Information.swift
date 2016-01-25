@@ -11,8 +11,6 @@ import UIKit
 import Parse
 import Bolts
 
-
-
 class Information: UIViewController, UITextViewDelegate {
     
     let logOutSuccessMessage = "Logging Out!"

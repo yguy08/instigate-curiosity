@@ -11,13 +11,10 @@ import UIKit
 import Parse
 import Bolts
 
-
-
 class Login: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginUsernameTextField: UITextField!
     @IBOutlet weak var passwordUsernameTextField: UITextField!
-    
     @IBOutlet weak var loginHeaderText: UILabel!
     
     override func viewWillAppear(animated: Bool) {
@@ -66,11 +63,7 @@ class Login: UIViewController, UITextFieldDelegate {
                 self.loginUsernameTextField.text = ""
                 self.passwordUsernameTextField.text = ""
                 self.loginUsernameTextField.becomeFirstResponder()
-            
             }
         }
     }
-    
-    
-    
 }

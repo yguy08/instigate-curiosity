@@ -76,6 +76,35 @@
             </objects>
             <point key="canvasLocation" x="304.5" y="-388.5"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="wb0-GU-OvG">
+            <objects>
+                <tableViewController id="V3M-pK-llJ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oU9-Ws-KCO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dZC-rb-Dhs">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dZC-rb-Dhs" id="K9I-8A-59h">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="V3M-pK-llJ" id="nnZ-xG-3BG"/>
+                            <outlet property="delegate" destination="V3M-pK-llJ" id="otG-Ds-iD7"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRx-Xh-487" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762.5" y="-388.5"/>
+        </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -133,6 +162,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvU-nD-HeY">
+                                <rect key="frame" x="287" y="369" width="30" height="30"/>
+                                <state key="normal" title="📊"/>
+                                <connections>
+                                    <segue destination="V3M-pK-llJ" kind="show" id="ufi-p8-2N8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -201,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjU-C0-Skc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="1152.5"/>
+            <point key="canvasLocation" x="304.5" y="1111.5"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="9vh-Qr-b1M">
@@ -256,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3e-jr-9LX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775.5" y="1152.5"/>
+            <point key="canvasLocation" x="762.5" y="1111.5"/>
         </scene>
         <!--Level Up Controller-->
         <scene sceneID="D9A-6w-mpg">
@@ -287,10 +323,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZC-iy-YCV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775.5" y="353.5"/>
+            <point key="canvasLocation" x="762.5" y="353.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GqN-td-7hi"/>
+        <segue reference="r7O-ZA-Xo1"/>
     </inferredMetricsTieBreakers>
 </document>
