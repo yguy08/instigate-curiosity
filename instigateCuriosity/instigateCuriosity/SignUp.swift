@@ -17,6 +17,7 @@ class SignUp: UIViewController, UITextFieldDelegate {
     
     //sign up bonus for signing up
     let SignUpBonus = 1000000000000
+    let currentUser = PFUser.currentUser()
     
     
     @IBOutlet weak var signUpUserNameTextField: UITextField!
@@ -56,10 +57,7 @@ class SignUp: UIViewController, UITextFieldDelegate {
         let user = PFUser()
         user.username = signUpUserNameTextField.text
         user.password = signUpPasswordTextField.text
-        //user.email = "wyatt.endres@gmail.com"
         // other fields can be set just like with PFObject
-        user["money"] = SignUpBonus
-        
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if let error = error {
@@ -70,14 +68,30 @@ class SignUp: UIViewController, UITextFieldDelegate {
                     let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Main")
                     self.presentViewController(viewController, animated: true, completion: nil)
                 })
+                
+                //give user moneySignUpBonus
+                self.addMoney()
             }
         }
+        
     }
-    
-    //method to end user session (log out)
-    func endUserSession(){
-        PFUser.logOut()
-        _ = PFUser.currentUser() // this will now be nil
+
+    //method to create money object assigned to user in parse
+    func addMoney(){
+        if currentUser != nil {
+            let moneyAccount = PFObject(className:"Money")
+            moneyAccount["money"] = SignUpBonus
+            moneyAccount["accountName"] = currentUser?.username
+            moneyAccount.saveInBackgroundWithBlock {
+                (success: Bool, error: NSError?) -> Void in
+                if (success) {
+                    // The object has been saved.
+                } else {
+                    // There was a problem, check error.description
+                }
+            }
+        } else {
+        }
     }
     
     
