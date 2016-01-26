@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343056EA1C56F89F003063E6 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343056E91C56F89F003063E6 /* LeaderboardViewController.swift */; };
+		343056EC1C56FA00003063E6 /* PointsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343056EB1C56FA00003063E6 /* PointsTableViewCell.swift */; };
 		34A490391C5464DD00290BEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A490381C5464DD00290BEC /* AppDelegate.swift */; };
 		34A4903B1C5464DD00290BEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4903A1C5464DD00290BEC /* ViewController.swift */; };
 		34A4903E1C5464DD00290BEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A4903C1C5464DD00290BEC /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		343056E91C56F89F003063E6 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		343056EB1C56FA00003063E6 /* PointsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTableViewCell.swift; sourceTree = "<group>"; };
 		34A490351C5464DD00290BEC /* instigateC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instigateC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A490381C5464DD00290BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A4903A1C5464DD00290BEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				34A490381C5464DD00290BEC /* AppDelegate.swift */,
 				34A4903A1C5464DD00290BEC /* ViewController.swift */,
 				34A4903C1C5464DD00290BEC /* Main.storyboard */,
+				343056EB1C56FA00003063E6 /* PointsTableViewCell.swift */,
 				34A4903F1C5464DD00290BEC /* Assets.xcassets */,
 				34A490411C5464DD00290BEC /* LaunchScreen.storyboard */,
 				34A490441C5464DD00290BEC /* Info.plist */,
@@ -124,6 +129,7 @@
 				34BBFD461C5533460098866E /* SignUp.swift */,
 				34BBFD481C5533740098866E /* Login.swift */,
 				34BBFD4A1C554DE30098866E /* Information.swift */,
+				343056E91C56F89F003063E6 /* LeaderboardViewController.swift */,
 			);
 			path = instigateCuriosity;
 			sourceTree = "<group>";
@@ -200,9 +206,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343056EA1C56F89F003063E6 /* LeaderboardViewController.swift in Sources */,
 				34A490661C54827600290BEC /* LevelUpController.swift in Sources */,
 				34BBFD4B1C554DE30098866E /* Information.swift in Sources */,
 				34A4903B1C5464DD00290BEC /* ViewController.swift in Sources */,
+				343056EC1C56FA00003063E6 /* PointsTableViewCell.swift in Sources */,
 				34BBFD491C5533740098866E /* Login.swift in Sources */,
 				34A490391C5464DD00290BEC /* AppDelegate.swift in Sources */,
 				34BBFD471C5533460098866E /* SignUp.swift in Sources */,

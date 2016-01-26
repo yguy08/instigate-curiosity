@@ -15,6 +15,7 @@ class Information: UIViewController, UITextViewDelegate {
     
     let logOutSuccessMessage = "Logging Out!"
     let logOutNoUserMessage = "You must be signed in to log out!"
+    let rocketButtonMessage = "Click the rocket to check your balance and see if you have enough to level up"
     
     @IBOutlet weak var informationTextView: UITextView!
     
@@ -29,6 +30,12 @@ class Information: UIViewController, UITextViewDelegate {
         logOutCurrentParseUser()
         dispatchToMainScreen()
     }
+    
+    
+    @IBAction func rocketButtonInfoAction(sender: AnyObject) {
+        informationTextView.text = rocketButtonMessage
+    }
+    
     
     //logout current user and send them to main
     func logOutCurrentParseUser(){
@@ -55,4 +62,6 @@ class Information: UIViewController, UITextViewDelegate {
             self.presentViewController(viewController, animated: true, completion: nil)
         })
     }
+    
+    
 }
