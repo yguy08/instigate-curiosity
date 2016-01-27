@@ -68,7 +68,6 @@ class SignUp: UIViewController, UITextFieldDelegate {
                     let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Main")
                     self.presentViewController(viewController, animated: true, completion: nil)
                 })
-                
                 //give user moneySignUpBonus
                 self.addMoney()
             }
@@ -78,6 +77,7 @@ class SignUp: UIViewController, UITextFieldDelegate {
 
     //method to create money object assigned to user in parse
     func addMoney(){
+        let currentUser = PFUser.currentUser()
         if currentUser != nil {
             let moneyAccount = PFObject(className:"Money")
             moneyAccount["money"] = SignUpBonus
@@ -91,9 +91,7 @@ class SignUp: UIViewController, UITextFieldDelegate {
                 }
             }
         } else {
+            
         }
     }
-    
-    
-    
 }

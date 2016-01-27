@@ -12,7 +12,6 @@ import Bolts
 
 class ViewController: UIViewController, UITextViewDelegate {
     
-    
     let HeadLineClassName = "Headline"
     let HeadLineObjectIdString = "QZVUNUutyi"
     let noUserSignedInMessageText = "Good Luck!"
@@ -57,7 +56,7 @@ class ViewController: UIViewController, UITextViewDelegate {
      }
     
     @IBAction func checkBalanceAction(sender: AnyObject) {
-        getCurrentBalance()
+        getMoneyBalance()
     }
     
     //Custom Functions
@@ -109,6 +108,30 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    //updated func to set header to balance with new money class. Needs testing.
+    func getMoneyBalance(){
+        let currentUser = PFUser.currentUser()
+        let currentUserName = currentUser?.username
+        if  currentUser != nil {
+            let query = PFQuery(className: "Money")
+            query.whereKey("accountName", equalTo: currentUserName!)
+            query.getFirstObjectInBackgroundWithBlock {
+                (object: PFObject?, error: NSError?) -> Void in
+                if error != nil || object == nil {
+                    print("The getFirstObject request failed.")
+                } else {
+                    // The find succeeded.
+                    print("Successfully retrieved the object.")
+                    let money = object!["money"] as! Int
+                    print(String(money))
+                    self.headlineLabel.text = String (money)
+                }
+            }
+        } else {
+            headlineLabel.text = noMoneyMessageText
+        }
+    }
+    
     //get the current user username and set to header
     func getCurrentUserName() {
         let currentUser = PFUser.currentUser()
@@ -139,8 +162,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         let headLineTextViewStringCount = headLineTextView.text.characters.count
         headLineTextView.selectedRange = NSMakeRange(0, (headLineTextViewStringCount))
     }
-    
-    
     
 }
 
